@@ -98,3 +98,5 @@ for epoch in range(5):
     print(f'epoch={epoch}')
     train(trai_dataloader, model, loss_fn, optimizer)
     test(test_dataloader, model, loss_fn, optimizer)
+
+torch.save(model.state_dict(), "checkpoint")
