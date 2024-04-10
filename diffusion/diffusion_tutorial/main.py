@@ -546,7 +546,7 @@ def train():
         all_images_list = list(map(lambda n: sample(model, image_size, batch_size=n, channels=channels), batches))
         all_images = torch.cat(all_images_list[0], dim=0)
         all_images = (all_images + 1) * 0.5
-        save_image(all_images, str(results_folder / f'sample-{epoch}.png'), nrow = 6)
+        save_image(all_images, str(results_folder / f'sample-{epoch}.png'), nrow = 4)
         print('saved', str(results_folder / f'sample-{epoch}.png'))
 
 

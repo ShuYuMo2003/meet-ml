@@ -15,13 +15,13 @@ training_data = datasets.FashionMNIST(
     root=_dataset_dir,
     train=True,
     download=True,
-    transform=ToTensor()
+    # transform=ToTensor()
 )
 test_data = datasets.FashionMNIST(
     root=_dataset_dir,
     train=False,
     download=True,
-    transform=ToTensor()
+    # transform=ToTensor()
 )
 
 # 创建需要的 data loader
@@ -65,6 +65,8 @@ def train(dataloader, model, loss_fn, optimizer):
 
     for batch, (X, y)in enumerate(dataloader):
         X, y = X.to(_device), y.to(_device)
+
+        print(X, y, type(X), type(y))
 
         pred = model(X)
         loss = loss_fn(pred, y)
