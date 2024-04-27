@@ -1,3 +1,7 @@
+- [SYM]
+ - https://pyrender.readthedocs.io/en/latest/install/#installing-osmesa
+
+
 # *NAP*: Neural Articulated Object Prior
 
 [project page](https://www.cis.upenn.edu/~leijh/projects/nap/) Neurips-2023
